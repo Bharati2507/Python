@@ -1,0 +1,194 @@
+### Job STARTED  at 2022/01/06 11:36:07 (jobId=20220106_113558_1sODM, jobExecutionId=20220106113607_aExop) ###
+Picked up JAVA_TOOL_OPTIONS: -Dlog4j2.formatMsgNoLookups=true
+[INFO ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- TalendJob: 'de_paypal_orchestration' - Start.
+[WARN ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- Null value will be used for context parameter DELAY: For input string: ""
+[WARN ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- Null value will be used for context parameter RESULT_COUNT: For input string: ""
+[WARN ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- Null value will be used for context parameter PROCESS_START_TIME: Unparseable date: ""
+[WARN ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- Null value will be used for context parameter MYSQL_METADATA_PORT: For input string: ""
+[WARN ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- Null value will be used for context parameter POSTGRES_METADATA_PORT: For input string: ""
+[INFO ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- context_load_1_tFileInputDelimited_1 - Retrieving records from the datasource.
+[INFO ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- context_load_1_tFileInputDelimited_1 - Retrieved records count: 53.
+[INFO ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- context_load_1_tFilterRow_2 - Processed records count:53. Matched records count:45. Rejected records count:8.
+[INFO ] 11:36:07 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- context_load_1_tContextLoad_1 - Loaded contexts count: 45.
+[INFO ] 11:36:08 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileList_1 - Start to list files
+[INFO ] 11:36:08 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileList_1 - File or directory count : 0
+********* Running Job DATAENG_PAYPAL for payPalVuduTRRRaw****
+
+**** Loading Global Variables for: payPalVuduTRRRaw****
+
+******************************************************************
+
+
+sourcefile in end = payPalVuduTRRRaw
+[INFO ] 11:36:08 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tRunJob_1 - The child job 'dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr' starts on the version '0.1' with the context 'Default'.
+[INFO ] 11:36:08 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- TalendJob: 'de_paypal_trr' - Start.
+DriverManager.getConnection("jdbc:redshift://int-jawsredshiftvip.int-uswest2.aws:5439/warehouse?loglevel=1")
+    trying com.amazon.redshift.jdbc.Driver
+getConnection returning com.amazon.redshift.jdbc.Driver
+DriverManager.getConnection("jdbc:mysql://intmysqlcluster.cluster-c22kjy1qxotr.us-west-2.rds.amazonaws.com:3306/talend_metadata?noDatetimeStringSync=true&rewriteBatchedStatements=true&allowLoadLocalInfile=true")
+    trying com.amazon.redshift.jdbc.Driver
+    trying org.postgresql.Driver
+    trying com.mysql.cj.jdbc.Driver
+getConnection returning com.mysql.cj.jdbc.Driver
+[INFO ] 11:36:09 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Connection_3 - Creating new connection.
+[INFO ] 11:36:09 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Connection_3 - Creating new connection successfully.
+DriverManager.deregisterDriver: com.amazon.redshift.jdbc.Driver@6e0dec4a
+registerDriver: com.amazon.redshift.jdbc.Driver@6e0dec4a
+DriverManager.getConnection("jdbc:postgresql://int-biwarehouse-secure-postgres.c22kjy1qxotr.us-west-2.rds.amazonaws.com:5432/intdatalakeloader")
+    trying org.postgresql.Driver
+getConnection returning org.postgresql.Driver
+DriverManager.deregisterDriver: com.amazon.redshift.jdbc.Driver@6e0dec4a
+registerDriver: com.amazon.redshift.jdbc.Driver@6e0dec4a
+DriverManager.getConnection("jdbc:postgresql://int-jawspostgresvip.int-uswest2.aws:5432/intdatawarehouseloader")
+    trying org.postgresql.Driver
+getConnection returning org.postgresql.Driver
+ ***Paypal SFTP_PATH /upload/ppreports/outgoing/ ***
+ ***Paypal Sourcetype= payPalVuduTRRRaw ****
+SFTP_FILE_NAME: TRR
+[INFO ] 11:36:09 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - SFTP authentication using a password.
+[INFO ] 11:36:09 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Attempt to connect to  'transfer.services.fandango.com' with username 'dataeng'.
+[INFO ] 11:36:11 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Connect to 'transfer.services.fandango.com' has succeeded.
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Listing files from server.
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Closing the connection to the server.
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Connection to the server closed.
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Listed files count: 0.
+Start_date : 20210823
+end_date : 20210823
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tLoop_1 - Start to loop using a while loop. Initial declaration: 'Date startDate1 =  ((java.util.Date)globalMap.get("row17.startDate"))'. Condition: 'TalendDate.compareDate(startDate1 ,((java.util.Date)globalMap.get("row17.endDate")))<=0'.
+extractdate 20210823
+starttime Mon Aug 23 00:00:00 UTC 2021
+endtime Tue Aug 24 00:00:00 UTC 2021
+FILE_NAME : TRR-20210823.01.011*
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - SFTP authentication using a password.
+[INFO ] 11:36:14 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Attempt to connect to  'transfer.services.fandango.com' with username 'dataeng'.
+[INFO ] 11:36:16 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Connect to 'transfer.services.fandango.com' has succeeded.
+[INFO ] 11:36:19 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Listing files from server.
+data_check select count(distinct sourcetype) 
+from talend_metadata.project_log 
+where sourcetype='payPalVuduTRRRaw' and start_time='2021-08-21'
+result_count 1
+fileDate_temp : 20210823
+fileDate_str : 2021/08/23
+fileDate_str_prev : 2021/08/22
+TRR-20210823.01.011.CSV
+file_name: TRR-20210823.01.011.CSV
+file_version: 011
+date_start_str: 20210823
+date_start: 20210822T000000Z
+date_end: 20210823T000000Z
+file_name_s3: payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+guid: bd487732-e965-4425-b62c-e819c1accfd5
+[INFO ] 11:36:19 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - SFTP authentication using a password.
+[INFO ] 11:36:19 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Attempt to connect to  'transfer.services.fandango.com' with username 'dataeng'.
+[INFO ] 11:36:21 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Connect to 'transfer.services.fandango.com' has succeeded.
+[INFO ] 11:36:21 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Downloading files from the server.
+[INFO ] 11:36:24 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Closing the connection to the server.
+[INFO ] 11:36:24 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Connection to the server closed.
+[INFO ] 11:36:24 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPGet_1 - Downloaded files count: 1.
+***STEP 1 : File downloaded - TRR-20210823.01.011.CSV to /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw
+[INFO ] 11:36:24 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_1 - Start to list files
+[INFO ] 11:36:24 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_1 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/TRR-20210823.01.011.CSV
+[INFO ] 11:36:25 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_1 - File or directory count : 1
+report_generation_date = 2021/08/24 02:54:55 -0700
+reporting_window = A
+account_id = DRJCBU74US4MG
+report_version = 011
+reporting_period_start_date = 2021/08/23 00:00:00 -0700
+reporting_period_end_date = 2021/08/23 23:59:59 -0700
+row_count = 27178
+[INFO ] 11:36:25 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_3 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:25 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_3 - Uploading an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:25 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_3 - Upload the object successfully.
+[INFO ] 11:36:25 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileInputDelimited_1 - Retrieving records from the datasource.
+[INFO ] 11:36:26 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileInputDelimited_1 - Retrieved records count: 27179.
+[INFO ] 11:36:26 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:26 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_4 - Uploading an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:27 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_4 - Upload the object successfully.
+SQLWarning: reason(Load into table 'paypaltrrdetail' completed, 27178 record(s) loaded successfully.) SQLState(01000) vendor code(0)
+SQLWarning: reason(Load into table 'paypaltrrmetadata' completed, 1 record(s) loaded successfully.) SQLState(01000) vendor code(0)
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_2 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_2 - Uploading an object with key:data_lake/extract/paypal/payPalVuduTRRRaw/2021/08/22/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Put_2 - Upload the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Closing the connection to the server.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Connection to the server closed.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFTPFileList_1 - Listed files count: 1.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Start to list files
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/TRR-20210823.01.011.CSV
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/TRR-20210823.01.011.CSV
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/TRR-20210823.01.011.CSV
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Deleting an object with key:data_lake/extract/paypal/tempDetail/payPalVuduTRRRaw/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_1 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Get an free connection from tS3Connection_3.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Deleting an object with key:data_lake/extract/paypal/tempMetadata/payPalVuduTRRRaw/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tS3Delete_4 - Delete the object successfully.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_3 - File or directory count : 7
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Start to list files
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/TRR-20210823.01.011.CSV
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/TRR-20210823.01.011.CSV is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/extract/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv.gz is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempDetail/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - Current file or directory path : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileDelete_1 - File : /opt/talend/dataeng/paypal/extract/payPalVuduTRRRaw/tempMetadata/temp_payPalVuduTRRRaw_inc_20210822T000000Z_20210823T000000Z.csv is deleted.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr- tFileList_2 - File or directory count : 7
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tRunJob_1 - The child job 'dataeng_paypal.de_paypal_trr_0_1.de_paypal_trr' is done.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileExist_1 - Directory or file : /opt/talend/dataeng/paypal/extract/footer_issues_paypal.txt doesn't exist.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileExist_2 - Directory or file : /opt/talend/dataeng/paypal/extract/missing_files_PAYPAL.txt exists.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileInputDelimited_2 - Retrieving records from the datasource.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileInputDelimited_2 - Retrieved records count: 1.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tSendMail_3 - Connection attempt to 'ops-relayvip.ops-uswest2.aws'.
+[INFO ] 11:36:30 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tSendMail_3 - Connection to 'ops-relayvip.ops-uswest2.aws' has succeeded.
+[INFO ] 11:36:31 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileDelete_4 - File : /opt/talend/dataeng/paypal/extract/missing_files_PAYPAL.txt is deleted.
+[INFO ] 11:36:31 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileList_3 - Start to list files
+[INFO ] 11:36:31 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- tFileList_3 - File or directory count : 0
+[INFO ] 11:36:31 dataeng_paypal.de_paypal_orchestration_0_1.de_paypal_orchestration- TalendJob: 'de_paypal_orchestration' - Done.
+
+### Job ENDED SUCCESSFULLY  at 2022/01/06 11:36:31 (jobId=20220106_113558_1sODM, jobExecutionId=20220106113607_aExop) ###
